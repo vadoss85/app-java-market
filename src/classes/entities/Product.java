@@ -52,7 +52,7 @@ public class Product extends CrudBase {
 
         Connection connection = this.getSql().getConnection();
 
-        PreparedStatement statement = connection.prepareStatement(sqlCommand);
+        PreparedStatement statement = connection.prepareStatement(sqlCommand, Statement.RETURN_GENERATED_KEYS);
         statement.setString(1, name);
         statement.setInt(2, price);
         statement.setString(3, status.status);
@@ -70,20 +70,6 @@ public class Product extends CrudBase {
         }
 
         return null;
-
-//        if (response.next()) {
-//            final ProductStatuses status =  ProductStatuses.get(response.getString( "status"));
-//
-//            return new Product(
-//                    response.getInt("id"),
-//                    response.getString("name"),
-//                    response.getInt("price"),
-//                    status,
-//                    response.getString("created_at")
-//            );
-//        }
-//
-//        return null;
     }
 
     public ArrayList<Product> get() throws SQLException {
@@ -136,6 +122,8 @@ public class Product extends CrudBase {
 
         Connection connection = this.getSql().getConnection();
         Statement statement = connection.createStatement();
+
+        System.out.println(statement);
 
         return statement.executeUpdate(sqlCommand);
     }

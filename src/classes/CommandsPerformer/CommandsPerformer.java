@@ -3,11 +3,9 @@ package classes.CommandsPerformer;
 import classes.CmdOptions.CmdCommands;
 import classes.CmdOptions.CmdOptions;
 import classes.CommandsPerformer.performers.*;
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.*;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,6 +25,12 @@ public class CommandsPerformer {
     public void executeCLICommand(String[] args) {
         try {
             CommandLine cmd = this.parse(args);
+
+            if (Arrays.stream(args).count() == 0) {
+                HelpFormatter formatter = new HelpFormatter();
+                formatter.printHelp( "java -jar ./Java.Market.jar", this.options.getOptions() );
+                return;
+            }
 
             if(cmd.hasOption(CmdCommands.CREATE_PRODUCT.command)) {
                 BaseCommandsPerformer productPerformer = new CreateProductCommandsPerformer();

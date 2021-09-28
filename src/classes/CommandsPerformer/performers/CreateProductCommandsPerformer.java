@@ -32,6 +32,7 @@ public class CreateProductCommandsPerformer extends BaseCommandsPerformer {
 
             if (isUserSubmitOperation) {
                 this.createProduct();
+                this.printSuccessMessage();
                 return;
             }
 
@@ -42,6 +43,7 @@ public class CreateProductCommandsPerformer extends BaseCommandsPerformer {
             if (err instanceof SQLException) {
                 this.print("Error with connection to Database.");
                 this.print("Exiting...");
+                ((SQLException) err).printStackTrace();
 
                 return;
             }
