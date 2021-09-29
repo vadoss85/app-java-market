@@ -35,7 +35,7 @@ public class CmdOptions {
         options.addOption(CmdCommands.DELETE_ALL_PRODUCTS.command, "delete-products",false, "Delete all product");
         options.addOption(deleteProductOption.build());
         options.addOption(CmdCommands.CREATE_ORDER.command, "create-order",false, "Create order");
-        options.addOption(CmdCommands.SHOW_ORDERED_PRODUCTS.command, "show-ordered-products",false, "Create order");
+        options.addOption(CmdCommands.SHOW_ORDERED_PRODUCTS.command, "show-ordered-products",false, "Show ordered products");
         options.addOption(showOrderOption.build());
         options.addOption(CmdCommands.LIST_ORDERS.command, "list-orders",false, "List orders");
 
