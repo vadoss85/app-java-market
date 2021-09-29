@@ -18,11 +18,11 @@ public class OrderedProductsTableView {
     }
 
     public static void printOrderProductDataTable(ArrayList<HashMap> orders) {
-        String leftAlignFormat = "| %-8d | %-11d | %-13s| %-14d | %-19s |%n";
+        String leftAlignFormat = "| %-8d | %-11d | %-23s| %-14d | %-19s |%n";
 
-        System.out.format("+----------+-------------+--------------+----------------+---------------------+%n");
-        System.out.format("| Order ID | Total price | Product name | Total quantity | Order created date  |%n");
-        System.out.format("+----------+-------------+--------------+----------------+---------------------+%n");
+        System.out.format("+----------+-------------+------------------------+----------------+---------------------+%n");
+        System.out.format("| Order ID | Total price | Product name           | Total quantity | Order created date  |%n");
+        System.out.format("+----------+-------------+------------------------+----------------+---------------------+%n");
         for (int i = 0; i < orders.size(); i++) {
             final HashMap product = orders.get(i);
             System.out.format(
@@ -34,6 +34,6 @@ public class OrderedProductsTableView {
                     product.get("createdAt")
             );
         }
-        System.out.format("+----------+-------------+--------------+----------------+---------------------+%n");
+        System.out.format("+----------+-------------+------------------------+----------------+---------------------+%n");
     }
 }
