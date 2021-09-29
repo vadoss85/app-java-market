@@ -34,7 +34,14 @@ Test Java project for Hybris Academy
     ```
 2. You should have installed jdk version v.17
 3. Clone repo
-4. Open terminal, change directory to root folder of project and run 
+4. To provide your own mysql config you can add *local.properties* file to project root folder with following configuration:
+   ```
+   mysql.host = localhost:3306
+   mysql.user = admin
+   mysql.password = _PASSword1_
+   mysql.table_name = java_app_market_db
+   ```
+5. Open terminal, change directory to root folder of project and run 
    ```
     java -jar .\out\artifacts\Java_Market_jar\Java.Market.jar
     ```

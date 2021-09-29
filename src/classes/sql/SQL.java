@@ -16,7 +16,7 @@ public class SQL {
         try {
             connection = DriverManager
                     .getConnection(
-                            config.getProtocol() + config.getHost() + config.getDatabase(),
+                            config.getProtocol() + config.getHost() + "/" + config.getDatabase(),
                             config.getUser(),
                             config.getPassword()
                     );
