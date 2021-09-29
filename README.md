@@ -48,7 +48,7 @@ Test Java project for Hybris Academy
    to view available commands.
 
 
-###Available CLI options
+### Available CLI options
 **-cp**, **--create-product** - creates product with provided data.
 ```
 java -jar .\out\artifacts\Java_Market_jar\Java.Market.jar -create-product
