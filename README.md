@@ -51,13 +51,13 @@ Test Java project for Hybris Academy
 ### Available CLI options
 **-cp**, **--create-product** - creates product with provided data.
 ```
-java -jar .\out\artifacts\Java_Market_jar\Java.Market.jar -show-products
+java -jar .\out\artifacts\Java_Market_jar\Java.Market.jar --create-product
 ```
 Follow steps, provide product data and confirm this step
 
 **-sp**, **--show-products** - prints all added products.
 ```
-java -jar .\out\artifacts\Java_Market_jar\Java.Market.jar -create-product
+java -jar .\out\artifacts\Java_Market_jar\Java.Market.jar --show-products
 ```
 
 **-co**, **--create-order** - creates order. You should provide product id (from previous view for example) and products quantity.
