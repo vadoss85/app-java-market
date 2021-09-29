@@ -25,7 +25,7 @@ public class MysqlConfig implements IMysqlConfig {
         }
     }
 
-    private void setLocalPropertiesToConfig(Properties localProps) {
+    public void setLocalPropertiesToConfig(Properties localProps) {
         String host = localProps.getProperty("mysql.host");
         String user = localProps.getProperty("mysql.user");
         String password = localProps.getProperty("mysql.password");

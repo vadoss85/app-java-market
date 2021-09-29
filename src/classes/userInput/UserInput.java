@@ -62,7 +62,7 @@ public class UserInput {
         }
     }
 
-    private String getTrimmedInput() throws NoSuchElementException {
+    public String getTrimmedInput() throws NoSuchElementException {
         return this.scanner.nextLine().trim();
     }
 }
